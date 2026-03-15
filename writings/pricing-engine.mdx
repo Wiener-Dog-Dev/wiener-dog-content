@@ -1,0 +1,28 @@
+---
+title: "Real-Time Pricing Engine"
+slug: pricing-engine
+tag: Technical
+tagVariant: green
+year: "2023"
+summary: "Scoped and shipped a dynamic pricing service processing 2M events/day."
+featured: true
+order: 4
+---
+
+## The problem
+
+Pricing was set manually by category managers and updated in batch jobs overnight. In a market where competitor prices changed multiple times a day, we were always reacting rather than competing in real time.
+
+## What I did
+
+This was the most technically complex project I've scoped. I embedded with the backend team for two weeks before writing a single line of the spec — I needed to understand the constraints before proposing a solution.
+
+The core architecture decision was whether to use a rules engine or an ML model for price recommendations. I pushed for rules first: faster to build, easier to audit, and sufficient for 80% of our SKUs. ML would come in Phase 2 for the long tail.
+
+I wrote the technical spec covering the event stream design (Kafka), the pricing service interface, and the rollback strategy. The key product decision was to make the engine advisory by default — category managers received recommendations with confidence scores but retained override control for the first 90 days.
+
+## Outcome
+
+- **2M events/day** processed at p99 < 50ms
+- Margin per order improved 3.1% in the first quarter
+- Zero pricing incidents in the first 6 months (the advisory mode paid off — it caught three edge cases before they became live errors)

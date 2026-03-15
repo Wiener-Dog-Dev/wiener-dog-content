@@ -1,0 +1,30 @@
+---
+title: "The API contract is your product"
+slug: api-contract-is-your-product
+tag: Strategy
+tagVariant: green
+year: "2025"
+summary: "For platform teams, the API is the product. Breaking changes aren't bugs — they're a product strategy failure."
+featured: false
+order: 6
+---
+
+When you're building a consumer product, the interface is the product. When you're building a platform, the API contract is the product. This distinction matters more than most platform PMs realise.
+
+## Breaking changes are a product decision
+
+Engineering teams often treat API versioning and deprecation as technical problems. They're not. Every breaking change is a forced migration for your users — and forced migrations erode trust in a way that's hard to recover from.
+
+The platforms I've seen succeed long-term treat their API contract the way consumer products treat their core user flows: changes are made deliberately, announced early, and supported through the transition.
+
+## The API changelog is your release notes
+
+Most API teams publish changelogs as an afterthought. The good ones treat the changelog as a first-class communication channel — the equivalent of app store release notes for developers.
+
+A useful API changelog answers three questions: what changed, why it changed, and what you need to do about it. If you can't answer all three, the change isn't ready to ship.
+
+## Version as a last resort
+
+Versioning is expensive. It creates parallel maintenance burden and fragments your user base across endpoints. Before reaching for a new version, ask whether the change can be made additive: new optional fields, new endpoints alongside old ones, new response properties that don't break existing consumers.
+
+Breaking changes that require a version bump should be rare and deliberate — not the default response to any significant API evolution.

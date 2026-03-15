@@ -1,0 +1,26 @@
+---
+title: "Search & Discovery"
+slug: search-discovery
+tag: Growth
+tagVariant: orange
+year: "2023"
+summary: "A/B tested 12 variants of the search ranking model to improve conversion."
+featured: true
+order: 3
+---
+
+## The problem
+
+Search was the highest-traffic feature on the platform but had the worst conversion rate of any entry point — 8.2% vs 14.1% for category browsing. The hypothesis was that our ranking model was optimising for relevance signals that didn't correlate with purchase intent.
+
+## What I did
+
+I worked with the ML team to decompose the ranking model and identify which features had the highest variance in user behaviour. We found that recency and seller rating were being over-weighted relative to price competitiveness and review velocity.
+
+Over three months I ran 12 A/B tests, each isolating a single ranking variable. We used a sequential testing framework to avoid the multiple comparisons problem and set a minimum detectable effect of 1.5% conversion lift per test.
+
+## Outcome
+
+- **+9.3% conversion** from search over the test series
+- Average order value from search entries increased 6%
+- Learned that personalisation signals only helped for users with 3+ prior purchases — under that threshold, they added noise

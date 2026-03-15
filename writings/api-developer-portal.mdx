@@ -1,0 +1,28 @@
+---
+title: "API Developer Portal"
+slug: api-developer-portal
+tag: Platform
+tagVariant: green
+year: "2024"
+summary: "Led 0→1 developer experience platform used by 400+ external partners."
+featured: true
+order: 2
+---
+
+## The problem
+
+Our API had 400+ active integrations but no dedicated portal. Partners were onboarding through email threads, PDF docs, and a Confluence space that hadn't been updated in 18 months. Support tickets from integration issues were consuming 30% of the engineering team's sprint capacity.
+
+## What I did
+
+This was a 0→1 product. I started by interviewing 12 partners to map their integration journey end to end — from first API key to first production call. Three patterns emerged: authentication confusion, unclear rate limit behaviour, and no visibility into their usage.
+
+I scoped a phased portal: Phase 1 was an API key dashboard and live reference docs (auto-generated from our OpenAPI spec). Phase 2 added usage analytics and a sandbox environment.
+
+The hardest decision was whether to build the docs ourselves or use an off-the-shelf solution. I chose a hybrid: structured content in our CMS fed into a custom React shell, giving us full control over the developer experience while reducing content maintenance overhead.
+
+## Outcome
+
+- **400+ partners** using the portal within 3 months of launch
+- Support ticket volume from integration issues dropped 47%
+- Time-to-first-API-call reduced from an average of 4 days to 6 hours
